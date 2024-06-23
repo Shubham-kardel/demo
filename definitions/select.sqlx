@@ -1,0 +1,23 @@
+-- Config blocks allow you to configure, document, and test your data assets.
+config {
+  type: "table",
+  schema: "rudderanalytics",
+  name: "students",
+  columns: {
+    id: "A unique identifier for each student",
+    first_name: "First name of the student",
+    last_name: "Last name of the student",
+    marks: "Marks obtained by the student",
+    grade: "Grade of the student"
+  }
+}
+
+
+SELECT
+  id,
+  first_name,
+  last_name,
+  marks,
+  grade
+FROM
+  rudderanalytics.student
